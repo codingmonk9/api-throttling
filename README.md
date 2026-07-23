@@ -6,8 +6,8 @@ Its developed using Node and express. Please use pnpm to set up and run locally.
 
 ## Useful commands
 
- * `pnpm run test`        perform the jest unit tests
- * `pnpm start`           deploy this stack to your default AWS account/region
+ * `pnpm run test`        perform the unit tests
+ * `pnpm start`           run the server
  
 ## Assumptions
 
@@ -15,7 +15,11 @@ Redis connection string is provided as per environment settings. Alternatively l
 
 ## Testing Instructions
 
-curl or postman can be used to hit the requests parallely.
+curl or postman can be used to hit the requests parallely. Following routes are available for access.
+
+* / - default route
+* /foo - for first client
+* /bar - for  second client
 
 
 
