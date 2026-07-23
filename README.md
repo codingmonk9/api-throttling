@@ -1,17 +1,20 @@
 # Welcome to API rate limiter.
 
-This is a project for testing rate limiting configuration.
+This project repo addresses API throttling and rate limiting for different routes, while exploring various throttling algorithms.
 
 Its developed using Node and express. Please use pnpm to set up and run locally.
 
 ## Useful commands
 
- * `pnpm run test`        perform the unit tests
- * `pnpm start`           run the server
+ * `pnpm run test`        performs the unit tests
+ * `pnpm start`           runs the server
  
-## Assumptions
+## Environment Configuration
 
-Redis connection string is provided as per environment settings. Alternatively local Redis instance should be pointed.
+* Redis connection string should be provided. Alternatively local Redis instance should be pointed.
+* API quota and interval for /foo, can be configured by LIMIT & INTERVAL in .env.
+* Maximum concurrent requestes can be configured by updating MAX_CONCURRENT_REQUESTS in .env.
+* API keys as passed from request auth header, should be configured at CLIENT1 & CLIENT2 in .env.
 
 ## Testing Instructions
 
